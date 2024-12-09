@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: aira-website
+    env: docker
+    plan: free
+    repo: https://github.com/YilinZhao6/AIRA-library.git
+    branch: main
+    buildCommand: docker build -t aira-website .
+    startCommand: docker run -p $PORT:80 aira-website
